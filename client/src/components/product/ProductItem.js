@@ -2,8 +2,10 @@ import React, { Component } from "react";
 
 class ProductItem extends Component {
 
+
+
     render() {
-        const { productName, unitPrice, thumbnail } = this.props
+        const { productName, unitPrice, thumbnail } = this.props.product
 
         return (
             <div className="col-md-3 col-sm-6">
@@ -11,7 +13,7 @@ class ProductItem extends Component {
                 <h5 className="mt-2">{productName}</h5>
                 <p className="text-end title">{unitPrice} THB</p>
                 <div className="d-grid gap-2">
-                    <button className="btn btn-block btn-secondary title">
+                    <button className="btn btn-block btn-secondary title"  onClick={() => this.props.onAddOrder(this.props.product)}>
                         ซื้อ
                     </button>
                     <hr />

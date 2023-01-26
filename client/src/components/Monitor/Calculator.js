@@ -1,21 +1,34 @@
 import React, { Component } from 'react'
 
 class Calculator extends Component {
+
+    showOrder(orders) {
+        if(!orders || orders.length === 0) {
+            return <li className="text-center text-muted title">ไม่มีสินค้าในตระกร้า</li>
+        }
+        else {
+            return orders.map(order =>{
+                return (
+                    <li className="text-center text-success title">
+                        {order.product.productName} x {order.quantity} = {order.product.unitPrice * order.quantity}
+                        <button className="ml-2 btn btn-light -btn-sm" onClick={() => this.props.onDelOrder(order.product)}>x</button>
+                    </li>
+                )
+            })
+        }
+    }
+
     render() {
+
+        const { totalPrice, orders } = this.props
+
         return (
             <div>
-                <h1 className="text-center">340.0</h1>
+                <h1 className="text-center">{totalPrice} THB</h1>
                 <hr />
 
                 <ul className="list-unstyled">
-                    <li className="text-center text-success title">
-                        บิงซู x 1 = 200.0
-                        <button className="btn btn-light -btn-sm">x</button>
-                    </li>
-                    <li className="text-center text-success title">
-                        เฟรนฟราย x 1 = 140.0
-                        <button className="btn btn-light -btn-sm">x</button>
-                    </li>
+                    {this.showOrder(orders)}
                 </ul>
                 <hr />
 
