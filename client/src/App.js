@@ -26,9 +26,9 @@ class App extends Component {
   render() {
 
     return (
-      <div>
+      <div className="mx-3 mt-2">
         <Header />
-        <Monitor products={this.products} />
+        <Monitor products={this.state.products} />
         <Footer company="Thairidgebuds" email="thairidgebuds@gmail.com" />
       </div>
     );

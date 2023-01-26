@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Calculator from './Calculator'
 import ProductList from '../product/ProductList'
 
-class monitor extends Component {
+class Monitor extends Component {
 
     render() {
         return (
@@ -21,4 +21,4 @@ class monitor extends Component {
     }
 }
 
-export default monitor
+export default Monitor

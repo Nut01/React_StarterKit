@@ -19,7 +19,7 @@ class Calculator extends Component {
                 </ul>
                 <hr />
 
-                <div className="d-grid gap-2 col-md-8 mx-auto">
+                <div className="d-grid gap-2 col-md-                    8 mx-auto">
                     <button className="btn btn-block btn-danger title">ยืนยัน</button>
                     <button className="btn btn-block btn-secondary title">ยกเลิก</button>
                 </div>

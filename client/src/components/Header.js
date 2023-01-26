@@ -31,13 +31,10 @@ class Header extends Component {
 
         const style = {
             height: 70,
-            marginTop: 15,
-            marginLeft: 100
         }
 
         const h5 = {
-            marginLeft: 175,
-            marginTop: 15,
+            marginRight: 20,
         }
 
         return (
@@ -47,7 +44,7 @@ class Header extends Component {
                         <h1 className="text-success"><img style={style} src="/images/Logo/logo.png" alt="" /> เฮลตี้ คาเฟ่</h1>
                     </div>
 
-                    <div className="col-md-4 text-center">
+                    <div className="col-md-4 text-end">
                         <h5 style={h5} className="text-muted mt-4">{this.state.date.toLocaleTimeString()}</h5>
                     </div>
                 </div>
